@@ -1,4 +1,4 @@
-package com.br.choppcloud.bank.pagamento;
+package com.br.choppcloud.bank.cartao;
 
 import java.math.BigDecimal;
 
