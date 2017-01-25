@@ -13,6 +13,5 @@
 	<modules>
 		<module>choppcloud-bank</module>
 		<module>choppcloud-buytrip</module>
-		<module>choppcloud-buyprocess</module>
 	</modules>
 </project>
