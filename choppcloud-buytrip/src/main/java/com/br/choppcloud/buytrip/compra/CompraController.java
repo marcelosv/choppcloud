@@ -18,7 +18,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @RestController
 public class CompraController {
 
-	private static final String COMPRA = "COMPRA";
+	private static final String COMPRA = "MARCELO";
 	
 	@Autowired
 	private StringRedisTemplate stringRedisTemplate;
@@ -37,5 +37,10 @@ public class CompraController {
 		
 		return new ResponseEntity<RetornoJson>(retorno, HttpStatus.OK);
 	}
+	
+	/*@JmsListener(destination = "pubsub:queue")
+    public void receiveMessage(String email) {
+        System.out.println("Received <" + email + ">");
+    }*/
 	
 }
