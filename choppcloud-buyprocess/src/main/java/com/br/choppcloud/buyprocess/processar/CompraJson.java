@@ -1,4 +1,4 @@
-package com.br.choppcloud.buytrip.compra;
+package com.br.choppcloud.buyprocess.processar;
 
 import java.math.BigDecimal;
 
