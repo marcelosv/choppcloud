@@ -24,10 +24,10 @@ public class CompraController {
 	@Autowired
     private RabbitTemplate rabbitTemplate;
 	
-	@Value("${compra.queue}")
+	@Value("${spring.cloud.stream.bindings.input.destination}.${spring.cloud.stream.bindings.input.group}")
 	private String nomeFila;
 	
-	@RequestMapping(path = "/compra", method = RequestMethod.POST)
+	@RequestMapping(path = "/", method = RequestMethod.POST)
 	public ResponseEntity<RetornoJson> pagamento(
 			@Valid @NotNull @RequestBody CompraJson compraJson) throws MessageConversionException, UnsupportedEncodingException {
 
