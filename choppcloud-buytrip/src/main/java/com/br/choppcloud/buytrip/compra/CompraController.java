@@ -1,6 +1,5 @@
 package com.br.choppcloud.buytrip.compra;
 
-import java.io.UnsupportedEncodingException;
 import java.util.UUID;
 
 import javax.validation.Valid;
@@ -8,7 +7,6 @@ import javax.validation.constraints.NotNull;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.JsonMessageConverter;
-import org.springframework.amqp.support.converter.MessageConversionException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -24,12 +22,12 @@ public class CompraController {
 	@Autowired
     private RabbitTemplate rabbitTemplate;
 	
-	@Value("${spring.cloud.stream.bindings.input.destination}.${spring.cloud.stream.bindings.input.group}")
+	@Value("${fila.saida}")
 	private String nomeFila;
 	
 	@RequestMapping(path = "/", method = RequestMethod.POST)
 	public ResponseEntity<RetornoJson> pagamento(
-			@Valid @NotNull @RequestBody CompraJson compraJson) throws MessageConversionException, UnsupportedEncodingException {
+			@Valid @NotNull @RequestBody CompraJson compraJson) throws Exception  {
 
 		CompraChaveJson compraChaveJson = new CompraChaveJson();
 		compraChaveJson.setCompraJson(compraJson);

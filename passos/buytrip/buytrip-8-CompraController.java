@@ -24,10 +24,10 @@ public class CompraController {
 	@Autowired
     private RabbitTemplate rabbitTemplate;
 	
-	@Value("${compra.queue}")
+	@Value("${fila.saida}")
 	private String nomeFila;
 	
-	@RequestMapping(path = "/compra", method = RequestMethod.POST)
+	@RequestMapping(path = "/", method = RequestMethod.POST)
 	public ResponseEntity<RetornoJson> pagamento(
 			@Valid @NotNull @RequestBody CompraJson compraJson) throws MessageConversionException, UnsupportedEncodingException {
 

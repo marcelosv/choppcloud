@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CompraController {
 
-	@RequestMapping(path = "/compra", method = RequestMethod.POST)
+	@RequestMapping(path = "/", method = RequestMethod.POST)
 	public ResponseEntity<RetornoJson> pagamento(
 			@Valid @NotNull @RequestBody CompraJson compraJson) {
 
