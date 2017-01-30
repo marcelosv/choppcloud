@@ -15,5 +15,6 @@
 		<module>choppcloud-buytrip</module>
 		<module>choppcloud-buyprocess</module>
 		<module>choppcloud-buyfeedback</module>
+		<module>choppcloud-gateway</module>
 	</modules>
 </project>
