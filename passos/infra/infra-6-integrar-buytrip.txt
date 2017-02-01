@@ -1,0 +1,15 @@
+spring.application.name=comprar
+spring.cloud.consul.host=localhost
+spring.cloud.consul.port=8500
+server.port=0
+
+
+
+no pom.xml add:
+
+
+
+<dependency>
+   <groupId>org.springframework.cloud</groupId>
+  <artifactId>spring-cloud-starter-consul-discovery</artifactId>
+</dependency>
