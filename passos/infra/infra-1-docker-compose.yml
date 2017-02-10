@@ -5,7 +5,7 @@ consul:
       - 8600:53/udp
       - 8500:8500
       - 8400:8400
-    command: -server agent -bind={SEU IP}  -client=0.0.0.0
+    command: -server -bootstrap agent -bind={SEU IP}  -client=0.0.0.0
     net: "host"
     restart: always
 
